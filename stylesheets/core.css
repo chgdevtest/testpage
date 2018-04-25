@@ -1,0 +1,226 @@
+.author {
+    color:black;
+    float: right;
+}
+
+body {
+	font-family: ariel, sans-serif;
+}
+
+.body-content {
+    padding-top: 20px;
+}
+
+.clear-floats {
+	clear: both;
+}
+
+.dark-grey-background {
+    background-color: #757171;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+.grey-background {
+	background-color: #ACBCBB;
+}
+
+.float-right {
+	float: right;
+}
+
+.form-container {
+    margin-top: 60px;
+}
+
+.footer {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.header-image {
+	max-height: 300px;
+}
+
+.header-number {
+	margin: 40px 0px;
+	font-weight: bold;
+}
+
+.image-background {
+    background-image: url('../assets/girl-on-phone.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-bottom: 160px
+}
+
+.light-grey-background {
+    background-color: #e4e9e8;
+    padding: 10px;
+    border-left: 4px solid lightgrey;
+    padding: 30px
+}
+
+.list-item {
+    margin-bottom: 60px;
+    padding-left: 10px;
+}
+
+h1.slogan {
+    font-size: 70px;
+}
+
+.margin-top {
+    margin-top: 20px
+}
+
+.ninety {
+    width: 90%;
+}
+
+p {
+    font-size: 20px;
+    color: grey;
+}
+
+.red-text {
+	color: #B20636;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.section-title > img {
+    float: left;   
+}
+
+.section-title {
+    border-bottom: 3px solid #c4cecd;
+}
+
+.white-text {
+    color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+    .header-text {
+        width: 1200px;
+        display: block;
+        margin: 0px auto;
+    }
+    
+    .footer-text {
+        width: 1050px;
+        display: block;
+        margin: 0px auto;
+    }
+    
+    .padding-left {
+        padding-left: 110px;
+    }
+    
+    .three-fourths {
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .section-title > h2 {
+        top: 10px;
+    }
+    
+    .section-title > h2 {
+        position: relative;
+        left: 20px;
+    }
+    
+    .white-text {
+        padding-left: 40px;
+    }
+    
+    .column-content {
+        padding:30px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .image-background {
+        background-position: center;
+        padding-bottom: 40px
+    }   
+    
+    h1.slogan {
+        font-size: 50px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .light-grey-background {
+        margin-bottom: 10px;
+    }
+    
+    .footer-text {
+        padding: 0px 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .form-col {
+        padding:30px;
+    }
+    
+    .image-background {
+        background-position: left;
+        padding-bottom: 20px;
+        text-align: center
+    }
+    
+    h1.slogan {
+        font-size: 40px;
+    }
+    
+    .white-text {
+        padding: 5px;
+    }
+    
+    .checkmark {
+        width: 40px
+    }
+    
+    .section-title > h2 {
+        position: relative;
+        left: 10px;
+        top: 4px;
+    }
+    
+    .list-item {
+        font-size: 22px;
+        margin-bottom: 50px
+    }
+    
+    .header-number {
+        font-size: 18px;
+        margin: 14px 0px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .section-title > h2 {
+        font-size: 24px;
+    }
+    
+    .section-title > img {
+        width: 20%;
+    }
+    
+    .list-item {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}
