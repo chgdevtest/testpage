@@ -4,9 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- My CSS, generated from my SCSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
     <title>Test Page</title>
 </head>
 <body>
-    
+    <p class="phone-header">
+        866.555.5555
+    </p>
+    <div class="image-container">
+        <img src="assets/girl-on-phone.jpg" alt="" class="center display-block">
+        <div class="image-large-text position-absolute">
+            WE'VE GOT YOUR BACK
+        </div>
+        <div class="image-small-text position-absolute">
+            You have specialized skills. Your recruiter should, too. Like you, we're dedicated to dialysis.
+        </div>
+    </div>
+    <div class="row"> <!-- Bootstrap grid system -->
+        <div class="col-sm-12 col-md-8">
+            <div class="body-text">
+                <p class="promo-description">
+                    Dialysis staffing isn't just our top priority it's our only priority. 
+                    We focus on your needs and devote 100 percent of our efforts to finding the job that works for you.
+                </p>
+                <p class="promo-header"><img src="assets/check-mark.png" alt="" class="big-check">
+                    With You Every Step of the Way
+                </p>
+                <hr class="promo-hr">
+                <p class="promo-benefits">24-hour access to your recrutier</p>
+                <p class="promo-benefits">Travel allowances and paid housing</p>
+                <p class="promo-benefits">Coverage under our professional liablitity insurance</p>
+                <p class="promo-benefits">Midical and dental insurance</p>
+                <p class="promo-benefits">401(k) retirement plans with match</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <form class="email-form" id="emailForm" >
+                <p class="email-form-header">
+                    Get the Job You Want and the Benefits You Deserve
+                </p>
+                <p class="email-form-description">
+                    We're committed to finding the job that works for you. To get started, simply send us a message using the form below to give us a call.
+                    <span class="red-number">866.555.5555</span>
+                </p>
+                <div class="form-group">                                                             <!-- browser "required" validation to not allow empty fields -->
+                    <input type="text" class="form-control form-required-inputs" id="firstName" name="firstNameInput" placeholder="First Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-required-inputs" id="lastName" name="lastNameInput" placeholder="Last Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control form-required-inputs" id="phone" name="phoneInput" placeholder="Phone *" 
+                            pattern="[(]{0,1}[0-9]{3}[)]{0,1}[ -.]{0,1}[0-9]{3}[ -.]{0,1}[0-9]{4}" required> <!-- pattern I wrote should handle most US phone numbers -->
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control form-required-inputs" id="email" name="emailInput" placeholder="Email *" required>
+                </div>
+                <div class="form-group">    <!-- Comments did not have an asterisk in the image, so I assumed it was not a required field -->
+                    <textarea class="form-control" id="comments" rows="2" name="commentInput" placeholder="Comments"></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">SUBMIT</button>
+            </form>  
+        </div>
+    </div>  
+    <p class="testimonials-header">
+        Testimonials
+    </p>
+    <hr class="testimonial-hr">
+    <div class="row"> <!-- Bootstrap cards -->
+        <div class="col-sm-12 col-md-6">
+            <div class="card left-card">
+            <div class="card-body">
+                <p class="card-text">
+                    "I have had the best times of my life traveling with Foundation Medical Staffing. 
+                    I get assignments where I want to go and I see the USA my way."
+                </p>
+                <p class="card-text credit-to"> 
+                    &#8212;DEBORAH B.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="card right-card">
+            <div class="card-body">
+                <p class="card-text">
+                    "I am a much better nurse with a much more professional practice because of my experiences with Foundation Medical Saffing."
+                </p>
+                <p class="card-text credit-to"> 
+                    &#8212;ALLAN S.
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <p class="footer-text-title">
+            Get the Job You Want and the Benefits You Deserve
+        </p>
+        <p class="footer-text-body">
+            We're commited to finding the job that works for you. 
+            To get started, simply send us a message using the form above or give us a call. 866.555.5555
+        </p>
+    </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="emailSuccessModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emailModalLabel">
+                    Thank You.
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Included JS file -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>
