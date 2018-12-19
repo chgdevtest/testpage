@@ -20,7 +20,7 @@
 
 9. The red hex color is #B20636
 
-10. The green color used is #ACBCBB
+10. The gray color used is #ACBCBB
 
 ## Complete
 
