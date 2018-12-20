@@ -1,5 +1,11 @@
 # Build a page
 
+## Development
+
+`npm start` to develop with live server
+
+`npm run build` to build for production
+
 ## Instructions
 
 1. Fork this repo

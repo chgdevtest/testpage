@@ -1,0 +1,313 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+input,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  color: var(--red);
+}
+a.txt-red:hover {
+  color: #000;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vh;
+  background: #fff;
+  box-shadow: 3px 3px 10px black;
+  border: none;
+  z-index: 1;
+}
+.dialog-close-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.dialog-close-btn:hover {
+  color: var(--red);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    top: 60%;
+  }
+}
+
+.dialog-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  animation: fadeUp 0.7s;
+}
+
+h1,
+.h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+h2,
+.h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hr-thick {
+  height: 2px;
+  border: none;
+  background: #333;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --red: #b20636;
+  --gray: #acbcbb;
+  --light-gray: #e7eceb;
+  --dark-gray: #807c7c;
+  --section-padding: 32px;
+}
+
+.txt-red {
+  color: #b20636; /* fallback */
+  color: var(--red);
+}
+.txt-gray {
+  color: #acbcbb; /* fallback */
+  color: var(--gray);
+}
+.txt-white {
+  color: #fff;
+}
+.bg-gray {
+  background: #acbcbb; /* fallback */
+  background: var(--gray);
+}
+
+.txt-all-caps {
+  text-transform: uppercase;
+}
+.txt-muted {
+  opacity: 0.7;
+}
+.txt-bold {
+  font-weight: bold;
+}
+
+.above-footer-wrapper {
+  margin: 8px;
+}
+
+.top-bar {
+  padding: 16px 8px;
+  text-align: right;
+}
+
+.banner {
+  margin: 12px 0;
+}
+.banner--img {
+  margin: auto;
+  padding: 16px;
+  width: 80%;
+  background-image: url('assets/girl-on-phone.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.banner--txt {
+  width: 50vw;
+  max-width: 450px;
+  margin-bottom: 7vw;
+}
+
+main {
+  display: flex;
+}
+
+.content,
+.contact-box,
+.content {
+  flex: 8;
+  padding: 32px; /* fallback */
+  padding: var(--section-padding);
+}
+
+.feature-list--header {
+  margin-bottom: 0;
+}
+.feature-list--header:before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url('assets/check-mark.png');
+  background-position: center;
+  background-size: cover;
+  vertical-align: middle;
+  margin: 0 24px 0 8px;
+}
+.feature-list--features {
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  font-size: 1.2rem;
+}
+.feature-list--features li {
+  margin-bottom: 3rem;
+}
+
+.contact-box {
+  flex: 4;
+  padding: 32px; /* fallback */
+  padding: var(--section-padding);
+}
+.contact-box--title {
+  margin-top: 0;
+}
+.contact-box--form input,
+.contact-box--form textarea {
+  margin: 8px 0;
+  padding: 12px 8px;
+  width: 100%;
+  font-weight: bold;
+}
+.contact-box--form input::-webkit-input-placeholder {
+  color: #969696;
+}
+.contact-box--form textarea::-webkit-input-placeholder {
+  /* color of textarea placeholder seems darker than inputs
+  not sure if it's supposed to be placeholder or actual text */
+  color: #4c4c4d;
+}
+.contact-box--form button[type='submit'] {
+  color: var(--red);
+  border: 1px solid var(--red);
+  background: none;
+  padding: 12px 16px;
+  margin: 12px 0 24px;
+  transition: 0.5s;
+}
+.contact-box--form button[type='submit']:hover {
+  background: var(--red);
+  color: #fff;
+  cursor: pointer;
+}
+
+.testimonials--title {
+  margin-left: 80px;
+}
+.testimonials--quotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 90px;
+}
+
+.testimonial {
+  padding: 16px;
+  background: var(--light-gray);
+  border-left: 2px solid var(--gray);
+  margin: 8px;
+}
+.testimonial--quote {
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+.testimonial--author {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+.testimonial--author:before {
+  content: '— ';
+}
+
+footer {
+  background: #807c7c; /* fallback */
+  background: var(--dark-gray);
+  color: #fff;
+  padding: 8px;
+}
+.footer-txt {
+  margin: 0 120px;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+  .banner--img {
+    width: calc(100% + 16px);
+    margin: 0;
+    margin-left: -8px;
+  }
+  .contact-box,
+  .testimonials,
+  .footer {
+    padding: var(--section-padding);
+  }
+  .contact-box {
+    max-width: 90vw;
+    margin: auto;
+  }
+  .feature-list--header:before {
+    display: block;
+    margin: 12px 0;
+  }
+  .testimonials--title {
+    margin: 2rem 0 0;
+  }
+  .testimonials--quotes {
+    margin: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .testimonials--quotes {
+    flex-direction: column;
+  }
+  footer {
+    padding: 24px;
+  }
+  .footer-txt {
+    margin: 0;
+  }
+}
