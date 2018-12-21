@@ -7,6 +7,7 @@
     <title>Test Page</title>
     <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
   <header>
@@ -39,10 +40,10 @@
       <p>We're committed to finding the job that works for you. To get started, simply send us a message using the form below or give us a call. <a href="tel:866.555.5555">866.555.5555</a></p>
       <form id="sidebar-form">
         <ul>
-          <li><input type="text" name="firstname" placeholder="First Name*" /></li>
-          <li><input type="text" name="lastname" placeholder="Last Name*" /></li>
-          <li><input type="number" name="phonenumber" placeholder="Phone Number*" /></li>
-          <li><input type="email" name="email" placeholder="Email*" /></li>
+          <li><input id="field-1" type="text" name="firstname" placeholder="First Name*" /></li>
+          <li><input id="field-2" type="text" name="lastname" placeholder="Last Name*" /></li>
+          <li><input id="field-3" type="number" name="phonenumber" placeholder="Phone Number*" /></li>
+          <li><input id="field-4" type="email" name="email" placeholder="Email*" /></li>
           <li><textarea placeholder="Comments"></textarea></li>
         </ul>
           <div class="form-footer"><input type="submit" value="Submit"></div>
@@ -67,10 +68,13 @@
       <h2>Get the Job You Want and the Benefits You Deserve</h2>
       <p>We're committed to finding the job that works for you. To get started, simply send us a message using the form above or give us a call. <a href="tel:866.555.5555">866.555.5555</a></p>
     </div>
-
   </footer>
+  <div id="form-submitted" class="modal">
+    <p>Thank you.</p>
+  </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <script src="assets/test.js"></script>
 </body>
 </html>
