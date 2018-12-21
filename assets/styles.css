@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size:3.5vw;
+}
+p {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 1em 0 1.5em;
+  line-height: 1.3;
+}
+a {
+  text-decoration: none;
+  color:  #B20636;
+}
+ul {
+  margin: 1.5em 0;
+  padding: 0 0 0 .5em;
+}
+ul li {
+  list-style: none;
+  margin: 0 0 1em;
+  font-size: 1.2em;
+}
+input[type=text], input[type=number], input[type=email], textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .5em;
+}
+header {
+  padding: 1em 6%;
+  text-align: right;
+  font-weight: 800;
+}
+/**************/
+/* SUBHEADER **/
+/**************/
+#subheader {
+  padding: 0 6%;
+  background: #ACBCBB;
+}
+#subheader .image {
+  background: url('girl-on-phone.jpg') center center no-repeat;
+  background-size: cover;
+}
+#subheader .caption {
+  padding: 1em;
+  color: #FFF;
+}
+#subheader .caption h1 {
+  font-weight:400;
+}
+#subheader .caption p {
+  font-size: 1em;
+}
+/******************/
+/** MAIN SECTION **/
+/******************/
+.main-section {
+  padding: 1em 6%;
+}
+.main-section .content h2 {
+  border-bottom: 1px solid #000;
+  padding: 0 0 .8em 10%;
+  font-size: 1.4em;
+  background-image: url('check-mark.png');
+  background-repeat: no-repeat;
+  background-size: 7%;
+  display: block;
+}
+.sidebar {
+  padding: 1em 6% 2em;
+  background: #ACBCBB;
+}
+.sidebar form {
+  margin-top: 4em;
+}
+.sidebar a {
+  font-weight: 800;
+}
+.sidebar ul {
+  padding: 0;
+}
+.sidebar .form-footer {
+  text-align: center;
+}
+.sidebar .form-footer input[type=submit] {
+  border: 1px solid #B20636;
+  background: transparent;
+  color: #B20636;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+/******************/
+/** TESTIMONIALS **/
+/******************/
+.testimonials {
+  padding: 2em 6%;
+}
+.testimonials h2 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 1em;
+}
+.testimonials .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.testimonials h2 {
+  border-bottom: 1px solid #000;
+}
+.testimonial {
+  padding: 1em;
+  border-left: 2px solid #dddddd;
+  margin-bottom: 2em;
+  background-color: #e8eceb;
+}
+.testimonial p:last-child {
+  text-align: right;
+  margin-bottom: 0;
+}
+.testimonial p cite {
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+.testimonial:last-child {
+  margin-bottom: 0;
+}
+
+/************/
+/* FOOTER **/
+/************/
+footer {
+  background: #807c7c;
+}
+footer .footer-section {
+  color: #FFF;
+  padding: 2em 6%;
+}
+footer .footer-section a {
+  color: #FFF;
+}
+@media screen and (min-width: 767px) {
+  body {
+    font-size: 1.75vw;
+  }
+  section {
+    margin: 0 1%;
+  }
+  input[type=text], input[type=number], input[type=email], textarea {
+    font-size: 15px;
+  }
+  #subheader .image {
+    background-position: center top;
+    max-width: 85%;
+    max-height: 350px;
+    margin: 0 auto;
+  }
+  #subheader .caption {
+    max-width: 55%;
+  }
+  #subheader .caption h1 {
+    font-size: 2.5em;
+  }
+  #subheader .caption p {
+    font-size: .9em;
+  }
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+  }
+  .main-section .content {
+    width: 60%;
+    padding: .5em 1em;
+  }
+  .main-section .content h2 {
+    font-size: 1.3em;
+    padding: .2em 0 1em 10%;
+  }
+  .main-section .content ul li {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
+  .main-section .sidebar {
+    width: 30%;
+    padding: .5em 1.2em 2em;
+  }
+  .main-section .sidebar h2 {
+    font-size:1.3em;
+  }
+  .sidebar form {
+    margin-top: 2em;
+  }
+  .sidebar form ul li {
+    margin: 0 0 15px;
+  }
+  .sidebar .form-footer {
+    text-align: left;
+  }
+  .sidebar .form-footer input[type=submit] {
+    font-size: .8em;
+  }
+  .testimonials {
+    padding: 1em 2em 1.5em;
+  }
+  .testimonials .wrapper {
+    flex-direction: row;
+  }
+  .testimonial {
+    width: 40%;
+    margin-bottom: 0;
+  }
+  .testimonials p {
+    font-size: .9em;
+  }
+}
