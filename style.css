@@ -1,0 +1,138 @@
+.wrapper {
+    border: 1px;
+}
+
+.container {
+    border: 1px solid black;
+    font-family: arial;
+}
+
+ul#headerul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li#header {
+    display: block;
+    color: #B20636;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: #B20636;
+    color: white;
+    background-image: url("assets/girl-on-phone.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 56.25%;
+}
+
+.paragraph p {
+    font-size: 10px;
+    max-width: 300px;
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.paragraph h5 {
+    padding-left: 20px;
+    font-size: 16px;
+    vertical-align: bottom;
+}
+
+hr {
+    background-color: black;
+}
+
+.bullets {
+    padding-top: 0px;
+}
+
+li.list {
+    list-style-type: none;
+    padding-bottom: 30px;
+    font-size: 12px;
+}
+
+.body img {
+    height: 25px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.body.form {
+    background-color: #ACBCBB;
+    padding: 25px 30px 75px 30px;
+}
+
+#formLabel {
+    font-size: 18px;
+    max-width: 320px;
+    text-align: justify;
+}
+
+.formStyle p {
+    font-size: 10px;
+}
+
+.button1 {
+    color: #B20636;
+    background-color: #ACBCBB;
+    border: 1px solid #B20636;
+    font-size: 10px;
+}
+
+hr {
+    display: block;
+    color: black;
+}
+
+.testimonial h6 {
+    padding-left: 2%;
+    padding-top: 5%;
+    font-size: 18px;
+}
+
+blockquote {
+    background-color: #d7e0df;
+    padding: 15px;
+    font-size: 12px;
+    text-align: justify;
+    color: rgb(112, 112, 112);
+}
+
+.review {
+    padding-left: 50px;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+p.cite {
+    text-align: right;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.footer {
+    background-color: gray;
+    color: white;
+    align-content: left;
+    width: 100%;
+}
+
+.footer-text {
+    padding: 2%;
+}
+
+
+.footer-text p {
+    font-size: 12px;
+}

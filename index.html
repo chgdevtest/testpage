@@ -1,12 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test Page</title>
+    <title>CHG TEST</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else if (form.checkValidity() == true) {
+                            $('#success').modal("show");
+                            event.preventDefault();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <div class="container">
+            <ul id="headerul">
+                <li id="header" style="float:right">866.555.5555</li>
+            </ul>
+
+            <div style="padding-left: 30px; padding-right: 30px; background: #ACBCBB;">
+                <div class="jumbotron">
+                    <h2>WE'VE GOT <br />YOUR BACK</h2>
+                    <p>You have specialised skills. Your recruiter should, too.Like<br /> you, we're dedicated to dialysis.</p>
+
+                </div> <!--       jumbotron div end-->
+            </div>
+            <div class="row" style="padding-right: 1%; padding-left: 2%;">
+                <div class="col-lg-9 body">
+                    <div class="paragraph">
+                        <p>Dialysis staffing isn't our top priority. It's our only priority.We focus on your needs and devote 100 percent of our efforts to finding the job that works for you</p>
+
+                        <h5>
+                            <img src="assets/check-mark.png" alt="check-mark" style="float: left"><span>With You Every Step of the Way</span>
+                        </h5>
+                        <hr>
+                        <div class="bullets">
+                            <ul>
+                                <li class="list">24hour access to your recruiter</li>
+                                <li class="list">Travel allowances and paid housing</li>
+                                <li class="list">Coverage under our professional liablility insurance</li>
+                                <li class="list">Medical and dental insurance</li>
+                                <li class="list">401(k) retirement plans with match</li>
+                            </ul>
+                        </div>
+
+                    </div> <!--            text div end-->
+                </div> <!--            body div end-->
+
+                <div class="col-lg-3 body form">
+                    <div class="formStyle">
+                        <!--   form div start-->
+                        <p id="formLabel">Get the Job You Want and the Benefits You Deserve</p>
+                        <p>We're committed to finding the job that works for you. To get started, simply send us a message using the form below or give us a call at <span style="color: #B20636; font-weight: bold">866.555.5555</span></p>
+                        <form id="form" class="needs-validation" novalidate="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid first name !
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid last name !
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid phone !
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email !
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="comments" placeholder="Comments">
+                            </div>
+                            <button type="submit" class="button1 btn-givi hvr-grow-shadow hvr-back-pulse">Submit</button>
+                        </form>
+                    </div>
+
+                    <div id="success" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Successful completion!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p style="color: black;">Thank you !</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--            form div end-->
+            </div> <!--            row 1 div end-->
+            <section class="testimonial">
+                <h6>Testimonials</h6>
+                <hr>
+                <div class="row">
+                    <!--  row 2 div start-->
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 review">
+                        <blockquote style="height: 80%;">
+                            <p>"I have had the best times of my life travelling with Foundation Medical Staffing. I get assignments where I want to go and I see the USA my way."</p>
+                            <p class="cite"><cite>-DEBORAH.B</cite></p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4 review clearfix">
+                        <blockquote style="height: 80%">
+                            <p>"I am a much better nurse with a much more professional practice because of my experience with Foundation Medical Staffing"</p>
+                            <p class="cite"><cite>-ALLAN.S</cite></p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div> <!--            row 2 div end-->
+            </section>
+            <div class="row">
+                <!--  footer row div start-->
+                <div class="col-md-12 footer" style="text-align: left; width: 100%;">
+                    <div class="footer-text" style="padding: 1% 15% 1% 15%;">
+                        <h5>Get the Job You Want and Benefits You Deserve</h5>
+                        <p>We're committed to finding the job that works for you. To get started, simply send us a message using the form below or give us a call at <span style="font-weight: bold">&nbsp; 866.555.5555</span></p>
+                    </div>
+                </div>
+            </div> <!--  footer row div end-->
+        </div> <!--       container div end-->
+    </div> <!--       wrapper div end-->
 </body>
+
 </html>
