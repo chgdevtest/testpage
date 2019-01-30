@@ -6,9 +6,32 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else if (form.checkValidity() == true) {
+                            $('#success').modal("show");
+                            event.preventDefault();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </head>
 
 <body>
@@ -25,7 +48,7 @@
 
                 </div> <!--       jumbotron div end-->
             </div>
-            <div class="row" style="padding-right: 15px;">
+            <div class="row" style="padding-right: 1%; padding-left: 2%;">
                 <div class="col-lg-9 body">
                     <div class="paragraph">
                         <p>Dialysis staffing isn't our top priority. It's our only priority.We focus on your needs and devote 100 percent of our efforts to finding the job that works for you</p>
@@ -52,44 +75,55 @@
                         <!--   form div start-->
                         <p id="formLabel">Get the Job You Want and the Benefits You Deserve</p>
                         <p>We're committed to finding the job that works for you. To get started, simply send us a message using the form below or give us a call at <span style="color: #B20636; font-weight: bold">866.555.5555</span></p>
-                        <form>
+                        <form id="form" class="needs-validation" novalidate="">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="firstName" placeholder="First Name*">
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid first name !
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="lastName" placeholder="Last Name*">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid last name !
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" id="phone" placeholder="Phone*">
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid phone !
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Email*">
+                                <input type="email" class="form-control" id="email" placeholder="Email*" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email !
+                                </div>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="comments" placeholder="Comments">
                             </div>
-                            <button type="button" class="button1" data-toggle="modal" data-target="#exampleModal">SUBMIT</button>
+                            <button type="submit" class="button1 btn-givi hvr-grow-shadow hvr-back-pulse">Submit</button>
+                        </form>
+                    </div>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Successful completion!</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p style="color: black;">Thank you !</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
+                    <div id="success" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Successful completion!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p style="color: black;">Thank you !</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
 
                 </div><!--            form div end-->
@@ -101,7 +135,7 @@
                     <!--  row 2 div start-->
                     <div class="col-md-2"></div>
                     <div class="col-md-4 review">
-                        <blockquote style="height: 80%">
+                        <blockquote style="height: 80%;">
                             <p>"I have had the best times of my life travelling with Foundation Medical Staffing. I get assignments where I want to go and I see the USA my way."</p>
                             <p class="cite"><cite>-DEBORAH.B</cite></p>
                         </blockquote>
@@ -117,8 +151,8 @@
             </section>
             <div class="row">
                 <!--  footer row div start-->
-                <div class="col-md-12 footer" style="text-align: left;">
-                    <div class="footer-text" style="padding: 15px 150px 0px 150px;">
+                <div class="col-md-12 footer" style="text-align: left; width: 100%;">
+                    <div class="footer-text" style="padding: 1% 15% 1% 15%;">
                         <h5>Get the Job You Want and Benefits You Deserve</h5>
                         <p>We're committed to finding the job that works for you. To get started, simply send us a message using the form below or give us a call at <span style="font-weight: bold">&nbsp; 866.555.5555</span></p>
                     </div>
