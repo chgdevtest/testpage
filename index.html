@@ -5,8 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test Page</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
-    
+    <div id="header">
+        <div class="number">866.555.5555</div>
+    </div>
+
+    <div id="top-image-wrap">
+        <div id="top-image">
+            <h1>WE'VE GOT YOUR BACK</h1>
+            <h6>
+                You have specialized skills. Your recruiter should, too. Like you, we're dedicated to dialysis
+            </h6>
+        </div>
+    </div>
+
+    <div id="dialysis-wrap">
+        <div class="info-text">
+            Dialysis staffing isn't just our top priority, it's our only priotiry. We focus on your needs and devote 100 percent of our efforts to finding the job that works for you.
+        </div>
+        <div id="check-wrap">
+            <div class="checkmark"></div>
+            <div class="checkInfo">With You Every Step of the Way</div>
+        </div>
+        <ul class="step-info">
+            <li>24-hour access to your recruiter</li>
+            <li>Travel allowances and paid housing</li>
+            <li>Coverage under our professional liability Insurance</li>
+            <li>Medical and dental Insurance</li>
+            <li>401(k) retirement plans with match</li>
+        </ul>
+    </div>
+
+    <div id="form-wrap">
+        <h2>Get the Job You Want and the Benefits You Deserve</h2>
+        <h6>
+            We're committed to finding the job that works for you. To get started, simply send us a message using the form below or give us a call. <span>866.555.5555</span>
+        </h6>
+        <form  onsubmit="checkForm(firstname.value, lastname.value, phone.value, email.value, comments.value)">
+            <input type="text" 
+                name="firstname" 
+                placeholder="First Name *" required>
+            <input type="text" 
+                name="lastname"  
+                placeholder="Last Name *" required>
+            <input type="tel" 
+                id="phone-input"
+                name="phone"  
+                placeholder="Phone *"
+                onkeyup="formatPhone(phone.value)" required>
+            <input type="text" 
+                name="email"  
+                placeholder="Email *" required>
+            <textarea name="comments" 
+                placeholder="Comments">
+            </textarea>
+            <br>
+            <input type="submit" value="SUBMIT">
+        </form> 
+    </div>
+
+    <div id="testimonials">
+
+        <h3>
+            Testimonials
+        </h3>
+        <div class="testimonial-box">
+            <div class="testimonial-quote">"I have had the best times of my life traveling with Foundation Medical Staffing. I get assignments where i want to go and I see the USA my way."</div>
+            <div class="testimonial-author">-DEBORAH B.</div>
+        </div>
+        <div class="testimonial-box right-box">
+            <div class="testimonial-quote">"I am a much better nurse with a much more professional practive because of my experiences with foundation Medical Staffing."</div>
+            <div class="testimonial-author">-ALLAN S.</div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <h2>Get the Job You Want and the Benefits You Deserve</h2>
+        <h6>
+            We're committed to finding the job that works for you. To get started, simply send us a message using the form below or give us a call. <span>866.555.5555</span>
+        </h6>
+    </div>
+
+
+
+
+    <script src="./index.js"></script>
 </body>
 </html>
