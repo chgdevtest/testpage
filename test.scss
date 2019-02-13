@@ -8,7 +8,10 @@ $light-gray: #f1f1f1;
 
 $font-size-h1: 2em;
 $font-size-h2: 1em;
-$font-size-lmd: 1.2em;
+$font-size-lg: 1.7em;
+$font-size-mdlg: 1.2em;
+$font-size-md: 1em;
+$font-size-smmd: 0.75em;
 
 #main{
     padding: 1.5em;
@@ -28,9 +31,8 @@ $font-size-lmd: 1.2em;
     color: $red;
 }
 .top .phone-link{
-    font-size: $font-size-lmd;
+    font-size: $font-size-mdlg;
 }
-
 
 .gray-background{
     background-color: $green;
@@ -48,24 +50,50 @@ $font-size-lmd: 1.2em;
     width: auto;
 }
 
-ul {
-  list-style-type: none;
+.general-p{
+    color: $dark-gray;
 }
-hr{
-        border-top: 0.75px solid rgba(0, 0, 0, 1);
+.footer-p{
+    color: white;
+}
+.form-padding{
+    padding: 3em 1.5em 3em 1.5em;
 }
 .form-field{
     width: 100%;
     padding: 0.5em;
     margin: 0.5em 0 0.5em 0;
 }
+.red-submit{
+    border: 1px solid $red;
+    color: $red;
+    font-weight: bold;
+    background: $green;
+    padding: 1em;
+}
+
+li {
+  list-style-type: none;
+  font-size: $font-size-lg;
+  margin-bottom: 2em;
+}
+hr{
+        border-top: 0.75px solid rgba(0, 0, 0, 1);
+}
+p{
+    font-size: $font-size-mdlg;
+}
 input{
     height: 3em;
+}
+input::placeholder{
+    color: $gray;
+    font-weight: bold;
 }
 textarea{
     height: 5em;
 }
-.red-submit{
-    border: none;
-    color: white;
+textarea::placeholder{
+    color: $dark-gray;
+    font-weight: bold;
 }
