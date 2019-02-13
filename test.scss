@@ -1,0 +1,71 @@
+
+$font-family: Arial, sans-serif; 
+$red: #B20636;
+$green: #ACBCBB;
+$gray: #c3cdcc;
+$dark-gray: #7f7b7b;
+$light-gray: #f1f1f1;
+
+$font-size-h1: 2em;
+$font-size-h2: 1em;
+$font-size-lmd: 1.2em;
+
+#main{
+    padding: 1.5em;
+}
+.top{
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: stretch;
+}
+.phone-link{
+ font: $font-family;
+    font-weight: bold;
+    color: $red;
+}
+.top .phone-link{
+    font-size: $font-size-lmd;
+}
+
+
+.gray-background{
+    background-color: $green;
+}
+
+.light-gray-background{
+    background-color: $light-gray;
+}
+
+.dark-gray-background{
+    background-color: $dark-gray;
+}
+
+.girl-on-phone{
+    width: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+hr{
+        border-top: 0.75px solid rgba(0, 0, 0, 1);
+}
+.form-field{
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0 0.5em 0;
+}
+input{
+    height: 3em;
+}
+textarea{
+    height: 5em;
+}
+.red-submit{
+    border: none;
+    color: white;
+}
