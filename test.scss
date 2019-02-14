@@ -26,15 +26,21 @@ $font-size-smmd: 0.75em;
 	align-content: stretch;
 }
 .phone-link{
- font: $font-family;
+    font: $font-family;
     font-weight: bold;
-    color: $red;
 }
 .top .phone-link{
     font-size: $font-size-mdlg;
-}
+    color: $red;
 
-.gray-background{
+}
+.general-text .phone-link{
+    color: $red;
+}
+.dark-gray-background .phone-link{
+    color: white;
+}
+.green-background{
     background-color: $green;
 }
 
@@ -44,17 +50,30 @@ $font-size-smmd: 0.75em;
 
 .dark-gray-background{
     background-color: $dark-gray;
-}
-
-.girl-on-phone{
-    width: auto;
-}
-
-.general-p{
-    color: $dark-gray;
-}
-.footer-p{
     color: white;
+    padding: 2em 0 2em 0;
+    margin: 1.2em -1.25em -1.25em -1.25em;
+}
+.img-height{
+    height: 20em;
+}
+.img-row-margin{
+    margin: 2em -1em 2em -1em;
+}
+.girl-on-phone{
+    object-fit: cover;
+}
+.img-text{
+    z-index: 100;
+    color: white;
+    position: absolute;
+    left: 10%;
+}
+.hr-length{
+    padding-right: 10%;
+}  
+.general-text{
+    color: $dark-gray;
 }
 .form-padding{
     padding: 3em 1.5em 3em 1.5em;
@@ -71,14 +90,28 @@ $font-size-smmd: 0.75em;
     background: $green;
     padding: 1em;
 }
+.testimonial-quote{
+    margin-left: 4em; 
+    border-left: 4px solid $gray;
+}
+.testimonial-name{
+    font-size: $font-size-md;
+    font-weight: bold;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: stretch;
+}
 
 li {
-  list-style-type: none;
-  font-size: $font-size-lg;
-  margin-bottom: 2em;
+    list-style-type: none;
+    font-size: $font-size-lg;
+    margin-bottom: 2em;
 }
 hr{
-        border-top: 0.75px solid rgba(0, 0, 0, 1);
+    border-top: 0.75px solid rgba(0, 0, 0, 1);
 }
 p{
     font-size: $font-size-mdlg;

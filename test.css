@@ -15,14 +15,22 @@
 .phone-link {
   font: Arial, sans-serif;
   font-weight: bold;
-  color: #B20636;
 }
 
 .top .phone-link {
   font-size: 1.2em;
+  color: #B20636;
 }
 
-.gray-background {
+.general-text .phone-link {
+  color: #B20636;
+}
+
+.dark-gray-background .phone-link {
+  color: white;
+}
+
+.green-background {
   background-color: #ACBCBB;
 }
 
@@ -32,18 +40,36 @@
 
 .dark-gray-background {
   background-color: #7f7b7b;
+  color: white;
+  padding: 2em 0 2em 0;
+  margin: 1.2em -1.25em -1.25em -1.25em;
+}
+
+.img-height {
+  height: 20em;
+}
+
+.img-row-margin {
+  margin: 2em -1em 2em -1em;
 }
 
 .girl-on-phone {
-  width: auto;
+  object-fit: cover;
 }
 
-.general-p {
-  color: #7f7b7b;
-}
-
-.footer-p {
+.img-text {
+  z-index: 100;
   color: white;
+  position: absolute;
+  left: 10%;
+}
+
+.hr-length {
+  padding-right: 10%;
+}
+
+.general-text {
+  color: #7f7b7b;
 }
 
 .form-padding {
@@ -62,6 +88,22 @@
   font-weight: bold;
   background: #ACBCBB;
   padding: 1em;
+}
+
+.testimonial-quote {
+  margin-left: 4em;
+  border-left: 4px solid #c3cdcc;
+}
+
+.testimonial-name {
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: stretch;
 }
 
 li {
