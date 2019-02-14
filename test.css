@@ -1,0 +1,141 @@
+#main {
+  padding: 1.5em;
+}
+
+.top {
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: stretch;
+}
+
+.phone-link {
+  font: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.top .phone-link {
+  font-size: 1.2em;
+  color: #B20636;
+}
+
+.general-text .phone-link {
+  color: #B20636;
+}
+
+.dark-gray-background .phone-link {
+  color: white;
+}
+
+.green-background {
+  background-color: #ACBCBB;
+}
+
+.light-gray-background {
+  background-color: #f1f1f1;
+}
+
+.dark-gray-background {
+  background-color: #7f7b7b;
+  color: white;
+  padding: 2em 0 2em 0;
+  margin: 1.2em -1.25em -1.25em -1.25em;
+}
+
+.img-height {
+  height: 20em;
+}
+
+.img-row-margin {
+  margin: 2em -1em 2em -1em;
+}
+
+.girl-on-phone {
+  object-fit: cover;
+}
+
+.img-text {
+  z-index: 100;
+  color: white;
+  position: absolute;
+  left: 10%;
+}
+
+.hr-length {
+  padding-right: 10%;
+}
+
+.general-text {
+  color: #7f7b7b;
+}
+
+.form-padding {
+  padding: 3em 1.5em 3em 1.5em;
+}
+
+.form-field {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.red-submit {
+  border: 1px solid #B20636;
+  color: #B20636;
+  font-weight: bold;
+  background: #ACBCBB;
+  padding: 1em;
+}
+
+.testimonial-quote {
+  margin-left: 4em;
+  border-left: 4px solid #c3cdcc;
+}
+
+.testimonial-name {
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: stretch;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1.7em;
+  margin-bottom: 2em;
+}
+
+hr {
+  border-top: 0.75px solid black;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+input {
+  height: 3em;
+}
+
+input::placeholder {
+  color: #c3cdcc;
+  font-weight: bold;
+}
+
+textarea {
+  height: 5em;
+}
+
+textarea::placeholder {
+  color: #7f7b7b;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=test.css.map */
