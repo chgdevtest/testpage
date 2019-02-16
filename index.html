@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Test Page</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -36,7 +36,7 @@
         </div>
       </div>
     </header>
-    <main class="row">
+    <main id="app" class="row">
       <div class="benefits col-12 col-md-6">
         <p>
           Dialysis staffing isn't just our top priority it's our only priority.
@@ -62,14 +62,33 @@
           simply send us a message using the form below or give us a call.
           <a class="red-text" href="tel:866-555-5555">866.555.5555</a>
         </p>
-        <form>
-          <input class="form-control" placeholder="First Name*" />
-          <input class="form-control" placeholder="Last Name*" />
-          <input class="form-control" placeholder="Phone*" />
-          <input class="form-control" placeholder="Email*" />
+        <form v-on:submit.prevent="submitForm">
+          <input required class="form-control" placeholder="First Name*" />
+          <input required class="form-control" placeholder="Last Name*" />
+          <input required class="form-control" placeholder="Phone*" />
+          <input required class="form-control" placeholder="Email*" />
           <textarea class="form-control" placeholder="Comments"></textarea>
-          <button type="subimt">Submit</button>
+          <button type="submit">Submit</button>
         </form>
+      </div>
+      <div v-if="showModal" id="thankyou-modal" class="modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                Thanks you.
+              </h5>
+              <button
+                type="button"
+                class="close"
+                @click="closeModal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <div class="testimonials">
@@ -102,4 +121,5 @@
       </p>
     </footer>
   </body>
+  <script src="scripts.js"></script>
 </html>
