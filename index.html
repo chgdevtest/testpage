@@ -62,12 +62,42 @@
           simply send us a message using the form below or give us a call.
           <a class="red-text" href="tel:866-555-5555">866.555.5555</a>
         </p>
-        <form v-on:submit.prevent="submitForm">
-          <input required class="form-control" placeholder="First Name*" />
-          <input required class="form-control" placeholder="Last Name*" />
-          <input required class="form-control" placeholder="Phone*" />
-          <input required class="form-control" placeholder="Email*" />
-          <textarea class="form-control" placeholder="Comments"></textarea>
+        <form v-on:submit.prevent="checkForm">
+          <input
+            v-model="firstName"
+            
+            class="form-control"
+            placeholder="First Name*"
+          />
+          <input
+            v-model="lastName"
+            
+            class="form-control"
+            placeholder="Last Name*"
+          />
+          <input
+            v-model="phone"
+            
+            class="form-control"
+            placeholder="Phone*"
+          />
+          <input
+            v-model="email"
+            
+            class="form-control"
+            placeholder="Email*"
+          />
+          <textarea
+            v-model="comments"
+            class="form-control"
+            placeholder="Comments"
+          ></textarea>
+          <p v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+            <ul>
+                <li v-for="error in errors">{{ error }}</li>
+            </ul>
+        </p>
           <button type="submit">Submit</button>
         </form>
       </div>
