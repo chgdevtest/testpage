@@ -4,6 +4,15 @@
 
 body {
   margin: 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  color: #80002d;
+}
+
+.row {
+  margin: unset;
 }
 
 header.main-header {
@@ -25,5 +34,135 @@ header.main-header .inner-header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  header.main-header .inner-header {
+    background-position: bottom;
+  }
+}
+
+main.row {
+  margin: 30px auto;
+}
+
+main > * {
+  margin: 0 30px;
+  max-width: 530px;
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main li {
+  margin-bottom: 35px;
+  font-size: 1.1rem;
+}
+
+.form-container {
+  margin-left: auto;
+  margin-right: 0;
+  background-color: #acbcbb;
+  padding: 35px;
+}
+
+.form-container input,
+.form-container textarea {
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  color: #b20636;
+  background-color: white;
+  border-color: #b20636;
+  border-top-color: #bdcaca;
+  border-left-color: #bdcaca;
+}
+
+.testimonials hr {
+  border-color: black;
+}
+
+.testimonials h4 {
+  margin-left: 40px;
+}
+
+.testimonial-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.testimonial {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  max-width: 365px;
+  background-color: lightgray;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: -5px 0px darkgray;
+          box-shadow: -5px 0px darkgray;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .testimonial {
+    max-width: 315px;
+  }
+}
+
+.testimonial .text {
+  font-size: 0.9rem;
+}
+
+.testimonial .author {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: gray;
+  margin: auto -10px;
+  color: white;
+  padding: 30px 10%;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer a {
+  color: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+  .benefits {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  h3 {
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
