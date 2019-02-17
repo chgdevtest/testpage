@@ -81,8 +81,8 @@ main {
     color: $redColor;
     background-color: white;
     border-color: $redColor;
-    border-top-color: #bdcaca;
-    border-left-color: #bdcaca;
+    border-style: solid;
+    padding: 5px 10px;
   }
 }
 
@@ -113,6 +113,7 @@ main {
   justify-content: space-between;
   box-shadow: -5px 0px darkgray;
   margin-bottom: 15px;
+  margin: 5px;
 
   @media only screen and (max-width: 767px) {
     max-width: 315px;

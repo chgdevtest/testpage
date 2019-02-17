@@ -1,4 +1,4 @@
-const vueApp = new Vue({
+new Vue({
   el: "#app",
   data: {
     showModal: false,

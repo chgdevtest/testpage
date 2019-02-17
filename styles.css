@@ -76,8 +76,8 @@ main li {
   color: #b20636;
   background-color: white;
   border-color: #b20636;
-  border-top-color: #bdcaca;
-  border-left-color: #bdcaca;
+  border-style: solid;
+  padding: 5px 10px;
 }
 
 .testimonials hr {
@@ -119,6 +119,7 @@ main li {
   -webkit-box-shadow: -5px 0px darkgray;
           box-shadow: -5px 0px darkgray;
   margin-bottom: 15px;
+  margin: 5px;
 }
 
 @media only screen and (max-width: 767px) {
